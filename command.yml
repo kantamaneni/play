@@ -1,0 +1,11 @@
+---
+- hosts: aditya
+  user: test
+  sudo: yes
+  tasks:
+   - name: installing telnet
+     command: yum install -y telnet
+   - name: install lynx package
+     shell: yum install -y lynx > /home/test/playbook
+   - name: running a script
+     script: ./abc.sh
